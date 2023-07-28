@@ -8,6 +8,11 @@
   <%= f.submit %>
 <% end %>
 
+<ul>
+<% Tweet.find_each do |tweet| %>
+  <li> <%= tweet.body %> </li>
+</ul>
+<% end %>
 
 <% else %>
 <h1>hello world</h1>
