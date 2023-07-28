@@ -1,5 +1,7 @@
 <% if user_signed_in? %>
 <%# blank for now %>
+<h1>we are logged in! </h1>
+<%= link_to "Log Out", destroy_user_session_path, data: {"turbo-method": :delete } %>
 <% else %>
 <h1>hello world</h1>
 <%= link_to "Sign up", new_user_registration_path, class: "btn btn-primary btn-lg" %>
